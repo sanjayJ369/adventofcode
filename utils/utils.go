@@ -89,6 +89,14 @@ func PrintMatrix[T any](matrix [][]T) {
 	}
 }
 
+func StringToUint64(str string) uint64 {
+	num, err := strconv.ParseUint(str, 10, 64)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	return num
+}
+
 func StringToInt(str string) int {
 	num, err := strconv.Atoi(str)
 	if err != nil {
